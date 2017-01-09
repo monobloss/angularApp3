@@ -1,0 +1,43 @@
+<section class="employee">
+  <h2 class="employee__heading primary_heading ">{{details[whichItem].name.first}} {{details[whichItem].name.last}}</h2>
+
+  <img class="employee__picture" data-ng-src="{{details[whichItem].picture}}" alt=""/>
+
+
+  <a class="btn employee__button" ng-click="$back()">Back</a>
+<h3 class="employee-details__heading">About</h3>
+<p class="employee-details__description">{{details[whichItem].about}}</p>
+
+
+<div class="employee-details__container container--right">
+<h3 class="employee-details__heading">Personal Details</h3>
+<ul class="employee-details__list">
+<li class="employee-details-list__item"><span class="employee-details-list-item__span">Age:</span> {{details[whichItem].age}}</li>
+<li class="employee-details-list__item"><span class="employee-details-list-item__span">Eye color:</span> {{details[whichItem].eyeColor}}</li>
+<li class="employee-details-list__item"><span class="employee-details-list-item__span">Balance:</span> {{details[whichItem].balance}}</li>
+</ul>
+</div>
+<div class="employee-details__container container--left">
+<h3 class="employee-details__heading">Business details</h3>
+<ul class="employee-details__list">
+  <li class="employee-details-list__item"><span class="employee-details-list-item__span">Company:</span> {{details[whichItem].company}}</li>
+  <li class="employee-details-list__item"><span class="employee-details-list-item__span">E-mail:</span> {{details[whichItem].email}}</li>
+  <li class="employee-details-list__item"><span class="employee-details-list-item__span">Phone:</span> {{details[whichItem].phone}}</li>
+  <li class="employee-details-list__item"><span class="employee-details-list-item__span">Adress:</span> {{details[whichItem].address}}</li>
+  <li class="employee-details-list__item"><span class="employee-details-list-item__span">Working since:</span> {{details[whichItem].registered}}</li>
+</ul>
+</div>
+<h3 class="employee-details__heading--marginless">Location</h3>
+<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsURL}}">
+  <ng-map class="employee-details_map" center="{{details[whichItem].latitude}},{{details[whichItem].longitude}}" zoom="15" >
+
+<marker position="{{details[whichItem].latitude}},{{details[whichItem].longitude}}" optimized="false"
+      icon="{
+        url:'assets/icons/34343.png',
+        scaledSize:[50,50],
+        
+        anchor: [50,50]
+      }" />
+     </ng-map>
+</div>
+</section>

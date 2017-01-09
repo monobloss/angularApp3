@@ -1,0 +1,15 @@
+<div class="appContainer__search">
+  <h1 class="primary__heading">Search for an Employee</h1>
+<input class="search__input" type="text" placeholder="search" data-ng-model="search"/>
+</div>
+<section class="employees">
+  <h2 class="primary__heading">employees</h2>
+<div class="employees__list">
+  <div class="employees-list__item" data-ng-repeat="employee in employees | filter: search">
+<img class="employees-list-item__thumbnail" data-ng-src="{{employee.thumbnail}}" alt="">
+<h3 class="employees-list-item__name">{{employee.name.first}} {{employee.name.last}}</h3>
+<p class="employees-list-item__description">{{employee.company}}</p>
+<a class="btn employees-list-item__button" href="#!/employee/{{employees.indexOf(employee)}}"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
+</div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html data-ng-app="userDirectoryApp">
+  <head>
+
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>User viewing interface</title>
+
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/lib/angular.min.js"></script>
+<script src="assets/lib/angular-route.min.js"></script>
+<script src="assets/lib/angular-animate.min.js"></script>
+<script src="assets/lib/ng-map.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/services/employeesService.js"></script>
+<script src="app/controllers/employeesController.js"></script>
+<script src="app/controllers/employeesDetails.js"></script>
+
+
+  <meta name="Daniel" content="name"/>
+  <meta name="description" content="App for viewing users and their user details"/>
+  <meta name="keywords" content="application, users, angularjs, foundation"/>
+  </head>
+
+  <body class="appBackground">
+<header data-ng-include="'app/views/header.html'"></header>
+<main class="appContainer">
+<data-ng-view></data-ng-view>
+</main>
+
+
+  </body>
+</html>
